@@ -1,0 +1,50 @@
+:root {
+  --primary: #2196f3;
+  --secondary: #ff9800;
+  --bg-color: #f5f7fa;
+  --surface: #ffffff;
+  --text-main: #212121;
+  --text-sub: #757575;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+  --radius: 12px;
+  --nav-height: 60px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.safe-area {
+  padding-bottom: calc(var(--nav-height) + 20px);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+button:active {
+  opacity: 0.7;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px; /* Prevents iOS zoom */
+}
