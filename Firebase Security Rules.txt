@@ -1,0 +1,25 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    "products": {
+      ".read": true,
+      ".write": "root.child('users').child(auth.uid).child('isAdmin').val() === true"
+    },
+    "users": {
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth.uid === $uid || root.child('users').child(auth.uid).child('isAdmin').val() === true"
+      }
+    },
+    "carts": {
+      "$uid": {
+        ".read": "auth.uid === $uid",
+        ".write": "auth.uid === $uid"
+      }
+    },
+    "orders": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}
