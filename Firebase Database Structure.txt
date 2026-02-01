@@ -1,0 +1,16 @@
+{
+  "users": {
+    "uid_123": { "name": "John", "isAdmin": true, "email": "admin@test.com" }
+  },
+  "products": {
+    "prod_001": { "name": "Phone", "price": "999", "image": "imgbb_url", "description": "..." }
+  },
+  "carts": {
+    "uid_123": {
+      "prod_001": { "name": "Phone", "price": "999" }
+    }
+  },
+  "orders": {
+    "order_abc": { "userId": "uid_123", "total": 999, "status": "Pending", "items": { ... } }
+  }
+}
